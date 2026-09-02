@@ -8,6 +8,7 @@ public class Main {
     static boolean isAlive;
     static char type;
     static String[] items;
+    static int incomingDamage;
 
     public static void main(String[] args) {
         name="Ragnar";
@@ -18,7 +19,11 @@ public class Main {
         gold=100.00;
         isAlive=true;
         type='w';
+        incomingDamage=30;
         items= new String[]{"sword", "sheild", "potion"};
+        if (currentHealth<=0){
+            isAlive=false;
+        }
         System.out.println("=== CHARACTER SHEET ===");
         System.out.println("Name: "+ name);
         System.out.println("Class: "+ type);
@@ -28,8 +33,28 @@ public class Main {
         System.out.println("Gold: "+ gold);
         System.out.println("Alive: "+ isAlive);
         System.out.println("\n\n\n"+"Inventory:" + items.length+":");
-        System.out.println("- "+items[0]);
-        System.out.println("- "+items[1]);
-        System.out.println("- "+items[2]);
+        for (int i=0;i<items.length;i++){
+            System.out.println("- "+ items[i]);
+        }
+        System.out.println("\n\n===System===");
+        if (currentHealth<maxHealth*0.25){
+            System.out.println("Critical Warning");
+        }
+        if (exp>=1000*level){
+            System.out.println("Ready to level up");
+        }
+
+        System.out.println("\n\n===Combar===");
+        System.out.println(name+" takes " + incomingDamage+ " damage!");
+        System.out.println("Healt: " + currentHealth+ "->" + (currentHealth-incomingDamage));
+        if (isAlive==true){
+            System.out.println(name+" is alive!");
+        }else {
+            System.out.println(name+" is Dead!");
+        }
+
+
+
+
     }
 }
