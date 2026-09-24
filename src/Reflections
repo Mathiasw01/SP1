@@ -1,0 +1,6 @@
+SP1
+Det var svært at starte med at skrive kode uden at bruge klasse og metoder, da det gjorde det meget uoverskueligt at
+lave programmet. Hvis jeg skulle starte forfra, ville jeg starte med at lave klasse og metoder og formentlig lave et
+klassediagram så jeg havde overblik fra starten. Hvis jeg skulle tilføje mere til projektet ville jeg gøre så man kunne
+spille spillet, ved at bede spilleren indtaste deres oplysninger med en scanner og så lave en dungeon som, enemies
+og items, og måske nogle andre slags rum.
